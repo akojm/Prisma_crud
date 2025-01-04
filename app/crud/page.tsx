@@ -8,7 +8,13 @@ export default function Crud() {
         className="bg-green-400 text-black px-4 py-2  mt-4 rounded-md max-w-fit"
         href="/"
       >
-        Users
+        Create User
+      </Link>
+      <Link
+        className="bg-blue-400 text-black px-4 py-2  mt-4 rounded-md max-w-fit"
+        href="/getInfoBdd"
+      >
+        Get Info Bdd
       </Link>
     </div>
   );

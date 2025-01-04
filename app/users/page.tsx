@@ -6,7 +6,7 @@ export default async function UsersPage() {
   return (
     <>
       <div>
-        <h1>Create Users</h1>
+        <h1>Create, Update, Delete Users</h1>
         <form
           action={createUser}
           className="flex ps-4 pe-4 pt-2 pb-2 bg-gray-100 border-gray-100 rounded-md"
@@ -27,7 +27,7 @@ export default async function UsersPage() {
             Create
           </button>
         </form>
-        <ul className="flex flex-col justify-around gap-2 mt-4">
+        <ul className="flex flex-col capitalize justify-around gap-2 mt-4">
           {user.map((user) => (
             <li className="pt-3" key={user.id}>
               <div className="flex flex-col-2 justify-around items-center bg-gray-200 pb-4 mb-4">
