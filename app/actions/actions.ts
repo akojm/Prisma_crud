@@ -9,9 +9,10 @@ export async function createUser(formData: FormData) {
   const surname = formData.get('surname') as string;
   const phone = parseInt(formData.get('phone') as string);
   const email = formData.get('email') as string;
+  const civility = formData.get('civility') as string;
 
   await prisma.user.create({
-    data: { name, surname, phone, email }
+    data: { name, surname, phone, email, civility }
   });
   revalidatePath('/users');
   //redirect('/products');
@@ -31,12 +32,13 @@ export async function updateUser(formData: FormData) {
   const surname = formData.get('surname') as string;
   const phone = parseInt(formData.get('phone') as string);
   const email = formData.get('email') as string;
+  const civility = formData.get('civility') as string;
 
   await prisma.user.update({
     where: { id },
-    data: { name, surname, phone, email }
+    data: { name, surname, phone, email, civility }
   });
-  //revalidatePath('/users');
+  revalidatePath('/users');
   //redirect('/users');
 }
 
